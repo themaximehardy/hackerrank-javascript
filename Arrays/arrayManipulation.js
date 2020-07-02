@@ -3,8 +3,8 @@
  * https://www.hackerrank.com/challenges/crush/problem
  * Difficulty: Hard
  * 
- * @param {number} n - the number of elements in your array
- * @param {array[]} queries - a two dimensional array of queries where each queries[i] contains three integers, a, b, and k
+ * @param {number} n: the number of elements in your array
+ * @param {array[]} queries: a two dimensional array of queries where each queries[i] contains three integers, a, b, and k
  */
 function arrayManipulation(n, queries) {
     const m = queries.length; // number of operations
