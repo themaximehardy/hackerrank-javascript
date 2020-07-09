@@ -3,8 +3,8 @@
  * https://www.hackerrank.com/challenges/luck-balance/problem
  *
  * Difficulty: Easy
- * @param {*} k: the number of important contests Lena can lose
- * @param {*} contests: a 2D array of integers
+ * @param {number} k: the number of important contests Lena can lose
+ * @param {number[][]} contests: a 2D array of integers
  */
 function luckBalance(k, contests) {
   const importantAmountOfLuck = [];

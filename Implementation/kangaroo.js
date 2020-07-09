@@ -3,10 +3,10 @@
  * https://www.hackerrank.com/challenges/kangaroo/problem
  * 
  * Difficulty: Easy
- * @param {*} x1: an integer, starting position for kangaroo 1
- * @param {*} v1: an integer, jump distance for kangaroo 1
- * @param {*} x2: an integer, starting position for kangaroo 2
- * @param {*} v2: an integer, jump distance for kangaroo 2
+ * @param {number} x1: an integer, starting position for kangaroo 1
+ * @param {number} v1: an integer, jump distance for kangaroo 1
+ * @param {number} x2: an integer, starting position for kangaroo 2
+ * @param {number} v2: an integer, jump distance for kangaroo 2
  */
 function kangaroo(x1, v1, x2, v2) {
   let prevDistance = Math.abs(x1 - x2);
