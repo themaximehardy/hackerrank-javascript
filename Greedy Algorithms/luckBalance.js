@@ -1,41 +1,40 @@
 /**
  * Luck Balance
  * https://www.hackerrank.com/challenges/luck-balance/problem
- * 
+ *
  * Difficulty: Easy
  * @param {*} k: the number of important contests Lena can lose
  * @param {*} contests: a 2D array of integers
  */
 function luckBalance(k, contests) {
-    const importantAmountOfLuck = [];
-    let important = 0;
-    let unimportant = 0;
+  const importantAmountOfLuck = [];
+  let important = 0;
+  let unimportant = 0;
 
-    for (const contest of contests) {
-        const amountOfLuck = contest[0];
-        if (contest[1] === 1) {
-            importantAmountOfLuck.push(amountOfLuck);
-            important += amountOfLuck;
-            continue;
-        }
-
-        unimportant += amountOfLuck;
+  for (const contest of contests) {
+    const amountOfLuck = contest[0];
+    if (contest[1] === 1) {
+      importantAmountOfLuck.push(amountOfLuck);
+      important += amountOfLuck;
+      continue;
     }
 
-    let result = important + unimportant;
+    unimportant += amountOfLuck;
+  }
 
-    const importantAmountOfLuckLen = importantAmountOfLuck.length
-    if (k < importantAmountOfLuckLen) {
-        const nbHasToWin = importantAmountOfLuckLen - k;
-        importantAmountOfLuck.sort((a, b) => a - b);
+  let result = important + unimportant;
 
-        for (let i = 0; i < nbHasToWin; i++) {
-            result -= (importantAmountOfLuck[i] * 2);
-        }
+  const importantAmountOfLuckLen = importantAmountOfLuck.length;
+  if (k < importantAmountOfLuckLen) {
+    const nbHasToWin = importantAmountOfLuckLen - k;
+    importantAmountOfLuck.sort((a, b) => a - b);
+
+    for (let i = 0; i < nbHasToWin; i++) {
+      result -= importantAmountOfLuck[i] * 2;
     }
+  }
 
-    return result;
+  return result;
 }
 
 module.exports = luckBalance;
-
