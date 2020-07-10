@@ -1,6 +1,9 @@
 {
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
   "files.insertFinalNewline": true,
   "editor.tabSize": 2
 }
